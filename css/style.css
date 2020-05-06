@@ -1,25 +1,24 @@
 body{
     font-family: 'Roboto', sans-serif;
-    width: 320px;
     background-image: url('../images/bg-body.png');
 }
 
+.container{
+    margin: 0 5px;
+}
+
 .main-header{
-    position: relative;
-    margin-bottom: 8vh;
-    top: 2vh;
+    margin-bottom: 5vh;
+    text-align: center;
 }
 
 .logo{
-    margin-left: 30vw;
-    margin-right: 30vw;
     width: 40vw;
     border-radius: 50%;
     border: 1px solid #CACACA;
 }
 
 .toggle-nav img{
-    margin-left: 42.5%;
     position: relative;
     width: 15%;
     top: 3vh;
@@ -27,20 +26,17 @@ body{
 
 .main-nav{
     position: relative;
-    width: 95%;
     top: 3vh;
-    left: 1.5%;
 }
 
 .main-nav ul{
+    list-style-type: none;
     padding-left: 0;
     line-height: 2;
 }
 
 .main-nav ul li {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     background-color: #3A3A3C;
 }
 
@@ -49,23 +45,12 @@ body{
     color: white;
 }
 
-.banner{
-    position: relative;
-    margin-bottom: 3vh;
-    left: 1.5%;
-    width: 95%;
-    height: 25vh;
-}
-
-.banner img{
-    width: 100%;
-    height: 100%;
+.banner img {
+    display: none;
 }
 
 .photo-container{
     position: relative;
-    width: 95%;
-    left: 1.5%;
 }
 
 .photo{
@@ -74,75 +59,48 @@ body{
 
 .special{
     position: absolute;
-    left: 28vh;
-    bottom: 57%;
+    right: 2vh;
+    width: 21%;
 }
 
-.zoom-container{
-    position: absolute;
-    width: 100%;
-    height: 5vh;
+.zoom {
+    left: 0%;
     background-color: rgba(0,0,0,0.5);
-    bottom: 60px;
-    right: 0px;
-    text-align: center;
-}
-
-.zoom{
-    position: relative;
+    padding: 5px 0;
+    position: absolute;
     text-decoration: none;
     color: white;
-    top: 5px;
+    bottom: 35%;
+    width: 100%;
+    text-align: center;
 }
 
 .product{
     margin-bottom: 3vh;
 }
 
-.product h2{
-    position: relative;
-    left: 1.5%;
-    bottom: 1vh;
-}
-
 .product p{
-    position: relative;
     color: #64646B;
-    width: 97%;
-    left: 1.5%;
 }
 
-.more-container{
+.more {
     background-color: #444444;
-    position: relative;
-    left: 1.5%;
-    width: 22%;
-    height: 5vh;
-}
-
-.more{
-    position: relative;
     text-decoration: none;
     color: white;
-    top: 1.4vh;
-    left: 2.3vw;
+    padding: 5px;
 }
 
 .main-footer{
-    position: relative;
-    width: 95%;
-    top: 3vh;
-    left: 1.5%;
+    text-align: center;
 }
 
 .main-footer ul{
-    padding-left: 0;
+    list-style-type: none;
+    padding: 0;
     line-height: 2;
 }
 
 .main-footer ul li {
-    display: flex;
-    justify-content: center;
     margin-bottom: 2px;
     background-color: #B92519;
 }
@@ -152,14 +110,14 @@ body{
     color: white;
 }
 
-@media(min-width: 767px){
+@media(min-width: 426px){
 
-    body{
-        width: 768px;
+    .container{
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .logo {
-        margin-left: 40vw;
         width: 20vw;
     }
 
@@ -167,46 +125,34 @@ body{
         display: none;
     }
 
-    .main-nav {
-        top: 4vh;
-        left: 2.5%;
-    }
-
-    .main-nav ul {
-        display: inline;
+    .main-nav ul {  
+        justify-content: space-between;
+        display: flex; 
+        margin: 0
     }
 
     .main-nav ul li {
-        padding-top: 2vh;
-        padding-bottom: 2vh;
-        display: inline;
+        width: 15.5%;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
     }
 
-    .main-nav ul li a {
-        padding: 2.79%;
+    .banner img {
+        display: block;
+        width: 100%;
     }
 
-    .banner {
-        top: 2vh;
-        left: 2.5%;
-        height: 35vh;
+    .vip-products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
+    
 
     .product {
         position: relative;
-        display: inline-block;
         top: 2vh;
-        left: 2%;
-        width: 48.4%;
-    }
-
-    .special{
-        left: 264px;
-        bottom: 122px;
-    }
-
-    .main-footer{
-        left: 2.5%;
+        width: 49%;
     }
 
     .zoom-container{
@@ -214,62 +160,24 @@ body{
     }
 }
 
-@media(min-width:1439px){
-    body{
-        width: 1440px;
-    }
+@media(min-width:769px){
 
-    .main-header{
-        position: relative;
-        margin-bottom: 8vh;
-        top: 2vh;
-        width: 1440px;
+    .container{
+        max-width: 1180px;
     }
 
     .logo{
-        box-sizing: border-box;
-        margin-right: 44vw;
-        margin-left: 44vw;
+        margin-top: 20px;
         width: 12vw;
     }
-
+z
     .main-nav{
-        left: 3%;
-        width: 1440px;
-    }
-
-    .main-nav ul {
-        display: inline;
-    }
-
-    .main-nav ul li {
-        margin-left: 20px;
-    }
-
-    .main-nav ul li a {
-        padding-left: 4.25%;
-        padding-right: 4.3%;
-    }
-
-    .banner {
-        left: 4.5%;
-        width: 92%;
-        height: 48vh;
-    }
-
-    .vip-products {
-        position: relative;
-        left: 3%;
+        margin: 5.5%
     }
 
     .product {
-        width: 31%;
-        left: 1%;
-    }
-
-    .special {
-        left: 325px;
-        bottom: 160px;
+        max-width: 380px;
+        width: 32%;
     }
 
     .zoom-container {
@@ -281,23 +189,14 @@ body{
         left: 19px;
     }
 
-    .main-footer{
-        width: 92vw;
-        left: 4.5%;
-        height: 21vh;
+    .main-footer ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
+        height: 21vh;
         background-color: #B92519;
-    }
-
-    .main-footer ul {
-        position: absolute;
-        top: 27%;
-        left: 29%;
-    }
-
-    .main-footer ul li{
-    display: inline;
     }
 
     .main-footer ul li:nth-child(1) {
